@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Pretendard:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif KR", ui-serif, Georgia, serif;
+
+  --color-primary: #BC243C;
+  --color-primary-dark: #8E1B2D;
+  --color-secondary: #F4A460;
+  --color-accent: #E9C46A;
+  --color-background: #FAF9F6;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-background text-zinc-900 overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300 rounded-full hover:bg-zinc-400 transition-colors;
+}
